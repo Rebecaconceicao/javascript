@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Você é Brasileiro ou Estrangeiro?</title>
+</head>
+<body>
+    <h1>Você é Brasileiro? veja abaixo:</h1>
+    <p>Coloque o nome do seu país por favor:</p>
+    <input type="text" name="pais" id="pais">
+    <input type="button" value="verificar" onclick="avaliar()">
+    <p id="result"></p>
+
+    <script>
+        function avaliar() {
+            let pa = document.getElementById('pais')
+           let paischeck = (pa.value)
+           let res = document.getElementById('result')
+           res.innerHTML = `Você é de ${paischeck}!`
+            if(paischeck == 'Brasil'){
+                res.innerHTML += ' então,sim! você é<strong> Brasileiro!!</strong> :DD'
+            } else {
+                res.innerHTML +=' então, você é <strong>Estrangeiro!</strong> é bom também! :D'
+            }
+        }
+
+    </script>
+    
+</body>
+</html>

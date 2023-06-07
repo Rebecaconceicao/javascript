@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos doms</title>
+    <style>
+        body{
+            background-color:rebeccapurple;
+        }
+        div#area{
+            background-color: #f13655;
+            color: white;
+            width: 400px;
+            height: 400px;
+            line-height: 400px;
+            text-align: center;
+            font-size: 2em;
+            top:50%;
+            left:50%;
+            position: absolute;
+            transform: translate(-50%,-50%);
+        }
+        div#lol{
+            height: 200px;
+            width: 200px;
+            border: 1px solid black;
+            background-color: aquamarine;
+            line-height: 200px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <!--Hello-->
+
+    <div id="area" onclick="clicar()" onmouseenter="entrar()" onmouseleave="sair()"> <!--on click, ='nome do evento' clicar = 'nome da função'-->
+        Interaja...
+    </div>
+
+    <div id="lol">
+        LOL
+    </div>
+<script>
+ /*como funciona o evento listerner
+ Primeiro o nome da variavel, ex: 'a' //
+depois o evento listener, ex: 'a.addEventListerner// 
+ e logo depois os parenteses() 
+dentro dos parenteses em primeiro vem o nome do evento dentro de aspas, ex: 'mouseenter' e em segundo o nome da função sem aspas, ex:'entrar' '*/
+ //primeiro o nome do evento // depois o nome da função.
+    function clicar() {
+       let acao = document.getElementById('area');
+       acao.style.backgroundColor = 'blue';
+       acao.innerText = 'clicou! :D';
+    }
+
+    function entrar() {
+        let acao = document.getElementById('area');
+
+        acao.innerText = 'Quaseee lááá~~ :D';
+    }
+
+    function sair() {
+        let acao = document.getElementById('area');
+        
+        acao.innerText = 'nooo~ volte! D:';
+        acao.style.backgroundColor = '#f13655';
+    }
+
+
+</script>
+
+<!--Observe como o nome do evento do evento listener é diferente do da função sem ele, na função normal é 'ONclick' já no eventlistener é 'click', cuidado.-->
+
+<script>
+    var lol = document.getElementById('lol');
+
+lol.addEventListener('click',clicou);
+lol.addEventListener('mouseenter',entrou);
+lol.addEventListener('mouseout',saiu);
+
+function clicou() {
+    lol.innerText = 'clicou!';
+    lol.style.backgroundColor = 'red';
+    lol.style.color = 'white';
+}
+
+function entrou() {
+    lol.innerText = 'entrou!';
+}
+
+function saiu() {
+    lol.innerText = 'saiu!!';
+    lol.style.backgroundColor = 'aquamarine';
+    lol.style.color = 'black';
+}
+</script>
+<!--Thank you-->
+</body>
+</html>
