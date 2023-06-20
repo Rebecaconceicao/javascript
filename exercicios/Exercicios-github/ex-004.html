@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex-004</title>
+</head>
+<body>
+    <h1>Trabalhando com Dados v2.0</h1>
+    <button onclick="mudanca()">Clique para começar</button>
+    <p id="muda">Aqui vai aparecer o resultado...</p>
+
+    <script>
+        function mudanca(){
+          let nome = prompt("Qual o seu nome?");
+        let lol = document.getElementById("muda");
+        lol.innerHTML = `Olá,   <strong>${nome}</strong>! É um grande prazer te conhecer!`
+        }
+    </script>
+</body>
+</html>
