@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex-007</title>
+    <style>
+        button{
+            font-size: 12pt; padding: 30px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Média do aluno v1.0</h1>
+    <button onclick="Media()">Calcular média</button>
+    <p id="demo">O resultado vai aparecer aqui...</p>
+    <script>
+        function Media(){
+        let nome = prompt("Qual é o nome do aluno?");
+        let nota1 = prompt(`Qual foi a primeira nota de ${nome}?`);
+        let nota2 = prompt(`Além de ${nota1}, qual foi a outra nota de ${nome}?`); 
+        let media = (Number(nota1) + Number(nota2)) /2
+        let demos = document.getElementById("demo");
+        demos.innerHTML = `Calculando a média final de ${nome}. <br> As notas obtidas foram ${nota1} e ${nota2}. <br> A média final será ${media}.`  
+        }
+    </script>
+</body>
+</html>
