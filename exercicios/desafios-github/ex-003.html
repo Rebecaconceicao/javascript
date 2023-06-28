@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Antes e depois</title>
+</head>
+<body>
+ <h1>Antes e depois</h1>
+ <button onclick="onClick()">Antecessor e Sucessor</button>
+ <script>
+    function onClick(){
+       let numtxt = prompt('Digite um numero inteiro qualquer.');
+       let num = Number(numtxt)
+       let ant = num - 1;
+       let suc = num + 1;
+       alert(`Antes de ${num}, temos o número ${ant}.
+Depois de ${num}, temos o número ${suc}.`)
+    }
+ </script>   
+</body>
+</html>
