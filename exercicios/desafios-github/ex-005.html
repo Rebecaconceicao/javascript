@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex-5</title>
+</head>
+<body>
+    <h1>Conversor de moedas</h1>
+    <button onclick="conversor()">Converter</button>
+    <p id="acao">
+        Clique no botão acima para iniciar.
+    </p>
+    <script>
+      function conversor(){
+       let metro = prompt('Digite uma distância em metros (m)')
+        let final = document.querySelector('p#acao')
+        final.innerHTML = `<strong>A distância de ${metro} metros, corresponde a...</strong>
+        <br>${metro/1000} Quilômetros(Km)
+        <br>${metro/100} Hectômetros(Hm)
+        <br>${metro/10} Decâmetros(Dam)
+        <br>${metro*10} Decímetros(dm)
+        <br>${metro*100} Centímetros(cm)
+        <br>${metro*1000} Milímetros(mm)` 
+      }
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>desafio 7</title>
+</head>
+<body>
+    <h1>Conversor R$ -> US$</h1>
+    <button onclick="conversor()">Converter</button>
+    <p id="resu">Clique no botão acima para iniciar.</p>
+    
+    <script>
+       let cotacao = prompt('Antes de mais nada. Quanto está a cotação do dólar agora?');
+        function conversor(){
+            let result = document.querySelector('p#resu');    
+            let real = prompt('Quantos R$ você tem na carteira?');
+            let cota = Number(cotacao)
+            let re = Number(real)
+            let dolar = re/cota;
+            result.innerHTML = `Com ${real}R$ você pode comprar ${Number.parseInt(dolar)} US$!`
+
+        };
+
+    </script>
+</body>
+</html>

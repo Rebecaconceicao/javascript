@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 6</title>
+</head>
+<body>
+    <h1>Conversor de Temperaturas</h1>
+    <button onclick="conversor()">Converter</button>
+    <p id="resu">Clique no botão acima para iniciar.</p>
+    <script>
+        function conversor(){
+          let celsi = prompt('Digite uma temperatura em °C (Celsius)');
+          const c = Number(celsi)  
+          const k = c + 273
+          const f = c * 1.8 + 32
+          const resul = document.querySelector('p#resu')
+          resul.innerHTML = `<strong>A temperatura de ${c}°C,corresponde a...</strong><br>${k}°K (Kelvin)<br> ${f}°F (Fahrenheit)` 
+        }
+    </script>
+</body>
+</html>
